@@ -1,0 +1,8 @@
+Website = "https://frankmayer.dev"
+
+[Details]
+  Icon = "resources/icon.png"
+  Name = "Semaphore"
+  ID = "dev.frankmayer.semaphore"
+  Version = "1.0.0"
+  Build = 6
