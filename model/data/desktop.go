@@ -18,11 +18,11 @@ func Load() error {
 		return errors.Wrap(err, "failed to get config path")
 	}
 
-	if err := os.MkdirAll(filepath.Dir(configPath), 0700); err != nil {
+	if err := os.MkdirAll(configPath, 0700); err != nil {
 		return errors.Wrap(err, "failed to create config directory")
 	}
 
-	configFilePath := filepath.Join(configPath, "config.json")
+	configFilePath := filepath.Join(configPath, "config.yaml")
 	if _, err := os.Stat(configFilePath); err != nil {
 		if os.IsNotExist(err) {
 			// File does not exist
@@ -52,11 +52,11 @@ func Save() error {
 		return errors.Wrap(err, "failed to get config path")
 	}
 
-	if err := os.MkdirAll(filepath.Dir(configPath), 0700); err != nil {
+	if err := os.MkdirAll(configPath, 0700); err != nil {
 		return errors.Wrap(err, "failed to create config directory")
 	}
 
-	configFilePath := filepath.Join(configPath, "config.json")
+	configFilePath := filepath.Join(configPath, "config.yaml")
 	file, err := os.OpenFile(configFilePath, os.O_WRONLY|os.O_CREATE|os.O_TRUNC, 0600)
 	if err != nil {
 		return errors.Wrap(err, "failed to create config file")

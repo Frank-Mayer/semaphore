@@ -9,6 +9,7 @@ type ImapConfig struct {
 	Port     int    `yaml:"port"`
 	Username string `yaml:"username"`
 	Password string `yaml:"password"`
+	Security string `yaml:"security"`
 }
 
 type SmtpConfig struct {
@@ -16,6 +17,7 @@ type SmtpConfig struct {
 	Port     int    `yaml:"port"`
 	Username string `yaml:"username"`
 	Password string `yaml:"password"`
+	Security string `yaml:"security"`
 }
 
 type Config struct {
