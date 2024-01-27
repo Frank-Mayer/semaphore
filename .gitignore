@@ -12,6 +12,7 @@
 *.a
 *.o
 /Semaphore
+*.wasm
 
 # Generated files
 view/resources.go
