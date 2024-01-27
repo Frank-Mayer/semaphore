@@ -10,7 +10,7 @@ if ost == "windows" then
 	end)
 	os.execute("Semaphore.exe")
 else -- unix
-	yab.task(yab.find("**.go"), "Semaphore.a", function()
+	yab.task(yab.find("**.go"), "Semaphore", function()
 		os.execute('go build -ldflags="-s -w" -o Semaphore')
 	end)
 	os.execute("./Semaphore")
