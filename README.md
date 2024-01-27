@@ -1,4 +1,4 @@
-# semaphore
+# semaphore <img src="resources/icon.png" alt="🚦" style="height:1em">
 
 ## Install
 
